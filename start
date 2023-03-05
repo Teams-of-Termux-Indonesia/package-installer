@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+main () {
+  #eval "pkg update -y && pkg upgrade -y";
+  # eval "pkg install nodejs-lts -y";
+  # eval "npm install";
+  #eval "termux-change-repo";
+  # eval "termux-setup-storage";
+  eval "node index.js";
+}
+
+main;

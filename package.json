@@ -1,0 +1,25 @@
+{
+  "name": "package installer",
+  "version": "1.0.0",
+  "description": "command line tools for install package in termux easly",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node index.test.js"
+  },
+  "keywords": [
+    "termux",
+    "cli",
+    "tools",
+    "installer",
+    "termux-package"
+  ],
+  "author": "fiandev, ryugenxd",
+  "license": "MIT",
+  "dependencies": {
+    "cfonts": "^3.1.1",
+    "chalk": "^5.2.0",
+    "enquirer": "^2.3.6",
+    "exec-sh": "^0.4.0"
+  }
+}
