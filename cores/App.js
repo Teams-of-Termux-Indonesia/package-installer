@@ -12,7 +12,7 @@ export default class App {
     this.name = name;
   }
   
-  async menu () {
+  static async menu () {
     const choice = await new Select(menu).run();
     switch (choice) {
       case "exit":
@@ -38,7 +38,9 @@ export default class App {
   }
   
   start () {
-    banner(this.name);
-    this.menu();
+    const { name } = this;
+    
+    banner(name);
+    App.menu();
   }
 }

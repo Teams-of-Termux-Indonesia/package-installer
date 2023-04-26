@@ -1,5 +1,6 @@
 import cfonts from "cfonts";
 import execute from "exec-sh";
+import { spawnSync } from "child_process";
 import File from "../lib/File.js";
 
 export const banner = async (text) => {
@@ -26,18 +27,20 @@ export const file_get_contents = (pathfile) => {
 
 
 export const createSlug = (text) => {
-  text.replace(/(\'|\"|\`)/, "");
+  text.replace(/(\'|\"|\`|\W)/, "");
   return text.toLowerCase().split(" ").join("-");
 };
 
 export const shell = (text) => {
-  text.split("\n").map(command => {
-    execute(command);
-  });
+  text.split("\n").map(command => execute(command));
 };
-
 
 export const print = (any, type = "log") => {
   if (!Object.keys(console).includes(type)) throw (`type ${ type } is not defined, try another type (${ Object.keys(console).join(" | ") })`);
   console[type](any);
+};
+
+
+export const check_package = (package_name) => {
+  return typeof spawnSync(package_name).pid === "number" ? true : false;
 };

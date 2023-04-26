@@ -8,7 +8,7 @@ command line tools for install package in termux easly
 
 ```shell
 pkg install git -y
-git clone https://github.com/fiandev/package-installer
+git clone https://github.com/Teams-of-Termux-Indonesia/package-installer
 cd package-installer
 
 # give permission executable shell
@@ -22,4 +22,4 @@ chmod 777 ./start
 ./start
 ```
 
-> built with ♥️ by fiandev under MIT license
+> built with ♥️ by our teams under MIT license
