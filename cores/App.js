@@ -34,6 +34,12 @@ export default class App {
             node ${ path.join(global.pwd, "./bash/scripts/hackpack.js") }
           `);
         break;
+      case "zhell-server":
+          shell(`
+            clear
+            node ${ path.join(global.pwd, "./bash/scripts/zhellServer.js") }
+          `);
+        break;
         
     }
   }

@@ -9,6 +9,7 @@ export const menu = {
     "exit",
     "setup termux",
     "hacker starter pack",
+    "zhell server",
   ].map(choice => ({
     name: createSlug(choice),
     message: choice
