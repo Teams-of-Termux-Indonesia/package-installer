@@ -1,6 +1,7 @@
 import enquirer from "enquirer";
 import path from "path";
 
+import Installer from "../lib/Installer.js";
 import { banner, shell } from "../utils/functions.js";
 import { menu } from "../constants/questions.js";
 import config from "../constants/config.js";
@@ -37,10 +38,13 @@ export default class App {
     }
   }
   
-  start () {
+  async start () {
     const { name } = this;
     
     banner(name);
-    App.menu();
+    
+    Installer.check(["node|node-lts", "git"]).then(() => {
+      App.menu();
+    });
   }
 }
